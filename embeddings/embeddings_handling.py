@@ -13,7 +13,7 @@ def custom_text_splitter(text, lines_per_chunk):
 def process_embeddings_and_store(document_texts, pc, index_name, client):
     vector_store = pc.Index(name=index_name)
     for full_text in document_texts:
-        document_chunks = custom_text_splitter(full_text, lines_per_chunk=1)
+        document_chunks = custom_text_splitter(full_text, lines_per_chunk=10)
         # Index documents
         for chunk_index, chunk in enumerate(document_chunks):
             # Create embedding for each chunk
