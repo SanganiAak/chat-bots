@@ -5,3 +5,4 @@ env/
 *.mp3
 app/
 *.db
+__pycache__
